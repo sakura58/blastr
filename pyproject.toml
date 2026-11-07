@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blastr"
+version = "0.1.0"
+description = "Blast radius for a diff — who calls what you just changed. Built for AI agents."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "blastr contributors" }]
+keywords = [
+  "git",
+  "diff",
+  "code-review",
+  "impact-analysis",
+  "static-analysis",
+  "agents",
+  "mcp",
+  "cli",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Testing",
+]
+
+[project.urls]
+Repository = "https://github.com/sakura58/blastr"
+Issues = "https://github.com/sakura58/blastr/issues"
+
+[project.scripts]
+blastr = "blastr.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
